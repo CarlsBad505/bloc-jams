@@ -13,6 +13,21 @@ var albumPicasso = {
 	]
 };
 
+var albumTidesOfMan = {
+	title: 'Young and Courageous',
+	artist: 'Tides of Man',
+	label: 'Firefly',
+	year: '2014',
+	albumArtUrl: 'assets/images/album_covers/11.png',
+	songs: [
+		{ title: 'Desolate. Magnificent.', duration: '3:18' },
+		{ title: 'Mountain House', duration: '2:52' },
+		{ title: 'Drift', duration: '5:05'},
+		{ title: 'Young and Courageous', duration: '5:39' },
+		{ title: 'All the Years', duration: '2:07'}
+	]
+};
+
 var albumMarconi = {
 	title: 'The Telephone',
 	artist: 'Guglielmo Marconi',
