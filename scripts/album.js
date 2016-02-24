@@ -74,4 +74,15 @@ var setCurrentAlbum = function(album) {
 
 window.onload = function() {
 	setCurrentAlbum(albumPicasso);
+	
+	var albumImage = document.getElementsByClassName('album-cover-art')[0];
+	var albumsArray = [albumPicasso, albumMarconi, albumTidesOfMan];
+	var index = 1;
+	albumImage.addEventListener("click", function(event) {
+		setCurrentAlbum(albumsArray[index]);
+		index++;
+		if (index === albumsArray.length) {
+			index = 0;
+		}
+	});
 };
