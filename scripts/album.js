@@ -86,14 +86,20 @@ var currentlyPlayingSong = null;
 window.onload = function() {
 	setCurrentAlbum(albumPicasso);
 	
-	var findParentByClassName = function(element, targetClass) {
-		if (element) {
-			var parent = element.parentElement;
-			while (parent.className != targetClass) {
+	var findParentByClassName = function(element, targetClass) {	
+		var parent = element.parentElement;
+		  if (parent) {
+			  while (parent.className && parent.className != targetClass) {
 				parent = parent.parentElement;
-			}
-			return parent;
-		}	
+			  }
+			  if (parent.className === targetClass) {
+				  return parent;
+			  } else {
+				  alert("No parent with that class name found");
+			  }
+		  } else {
+			  alert("no parent found");
+		  }
 	};
 	
 	var getSongItem = function(element) {
@@ -155,12 +161,3 @@ window.onload = function() {
 		});
 	}
 };
-
-// My attempt at the findParentByClassname function is below:
-
-//var findParentByClassName = function(parentClass, childClass) {
-//	var children = document.querySelectorAll(parentClass, childClass);
-//	for (var i = 0; i < children.length; i++ ) {
-//		children[i].innerHTML = "Filler";
-//	}
-//};
